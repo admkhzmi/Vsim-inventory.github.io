@@ -1,0 +1,247 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(to right, #FF0000, #0000FF);
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: relative; /* For positioning the logout button */
+}
+
+#logoutButton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px;
+}
+
+#logoutButton:hover {
+    background-color: #c82333;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    gap: 20px; /* Add gap between sidebar and content */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.sidebar button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.sidebar button:hover {
+    background-color: #218838;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px; /* Added margin to create space between tables */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    word-wrap: break-word; /* Handle long text in table cells */
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+/* Edit and Delete Button Styles */
+.edit-btn, .delete-btn, .edit-user-btn, .delete-user-btn {
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.edit-btn, .edit-user-btn {
+    background-color: #007bff; /* Blue background for edit buttons */
+    color: white;
+}
+
+.edit-btn:hover, .edit-user-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover for edit buttons */
+}
+
+.delete-btn, .delete-user-btn {
+    background-color: #dc3545; /* Red background for delete buttons */
+    color: white;
+}
+
+.delete-btn:hover, .delete-user-btn:hover {
+    background-color: #c82333; /* Darker red on hover for delete buttons */
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for visibility */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+    font-size: 16px;
+}
+
+form input, form textarea {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+}
+
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    align-self: flex-start;
+    font-size: 16px;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+/* Focus Style for Sidebar Buttons */
+.sidebar button:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
